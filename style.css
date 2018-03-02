@@ -1,0 +1,461 @@
+/*
+Theme Name: CINE 2018
+Theme URI: #
+Description: A responsive theme created for Cinefreaks.
+Author: John Patlakas, Anestis Chatzidiakos 
+Author URI:# 
+Version: 5
+Tags: responsive, white, cinema,
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+*/
+
+@import url('css/bootstrap.css'); 
+
+#footer {background: #D71F2B;}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+/*  font-size: 1.2em; 
+  line-height: 1.52857143em;*/
+  color: #151515;
+  background-color: #f3f3f3;  
+    /*background-image: url("http://cinefreaks.gr/wp-content/uploads/2017/09/CINEFREAKS1920X1080.jpg"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top 10px;
+}
+
+p{
+	font-size: 1.2em;
+}
+
+.container {
+  
+}
+
+/*
+html {
+  font-size: 1em;
+}
+}
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 3em;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 4em;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 5em;
+  }
+*/
+
+
+
+
+
+.videoWrapper {
+
+
+	position: relative;
+
+
+	padding-bottom: 56.25%; /* 16:9 */
+
+
+	padding-top: 25px;
+
+
+	height: 0;
+
+
+}
+
+
+.videoWrapper iframe {
+
+
+	position: absolute;
+
+
+	top: 0;
+
+
+	left: 0;
+
+
+	width: 100%;
+
+
+	height: 100%;
+
+
+}
+
+
+ 
+
+
+.wrapper {
+
+
+	background-color: white;
+
+
+	width: 650;
+
+
+	margin: 40px auto;
+
+
+	padding: 50px;
+
+
+	box-shadow: 0 0 3px #999;
+
+
+}
+
+/*.nav-pills > li {
+  float: inline;
+  
+}
+.nav-pills > li > a {
+  border-radius: 4px;
+}
+.nav-pills > li + li {
+  margin-left: 2px;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #b51518;
+}
+
+#tabsprovolon .li .a {
+	padding: 0px;
+	margin: -10px;
+}
+*/
+
+#mapgr {
+	height: 100%;
+}
+
+#maptheater {
+	height: 20em;
+	width: 100%;
+}
+
+#top {
+  color:#fff;
+  min-height:3%;
+ background-color: #b51518;
+}
+
+#belowtop {
+  color:#000;
+  min-height:3%;
+  padding-top:5px;
+  padding-bottom:5px;
+ background-color: #fff;
+}
+
+
+
+#main {
+
+background-position:cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f3f3f3;
+/*  a{
+	font-weight:bold;
+  } */ 
+}
+
+#mustread {
+background-color: #b51518;
+color: #fff;  
+min-height: 10px;
+}
+
+
+img {
+   display: inline;
+  max-width: 100%;
+  height: auto;
+  
+  }
+ a {
+  color: #AF1E30;
+  text-decoration: none;
+ }
+
+a:hover,
+a:focus {
+  color: #b00000;
+  text-decoration: none;
+}
+
+.well {
+  min-height: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: -25px !important;
+  background-color: #FFE5E5;
+  border: 2px dotted #AF1E30/*e3e3e3*/;
+}
+
+hr {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  border: 0;
+  border-top: 2px solid #AF1E30;
+}
+
+#smallhr {
+  padding-top: 3px;
+  padding-bottom: 0px;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  width:40%;
+}
+
+.square-2 {
+    float:left;
+    position: relative;
+    width: 100%;
+    padding-bottom : 70%; 
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.poster {
+    float:left;
+    position: relative;
+    width: 100%;
+    padding-bottom : 160%; 
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media (min-width: 768px) {  .container {    width: 100%; font-size: 3em; } }
+@media (min-width: 900px) {  .container {    width: 800px; font-size: 2.5em; }  }
+@media (min-width: 1300px) {  .container {    width: 1050px; font-size: 1em; } }
+
+
+.page-header {
+  padding-bottom: 5px;
+  
+  border-bottom: 1px solid #b51518;
+}
+
+/* 22/7 ADDED */
+
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  
+}
+
+.panel {
+  margin-bottom: 5px;
+  background-color: #fff;
+  border: 2px solid #b51518;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.btn {
+margin:5px;
+}
+
+
+.nav-primary {
+    background: #b51518;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(186, 0, 0, 0),
+            rgba(186, 0, 0, 0) 90%,
+            rgba(186, 0, 0, 100) 90%,
+            rgba(186, 0, 0, 100) 100%
+        );
+    clear: both;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-primary li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom; /* IE9 fix: li v-aligns with baseline on hover without this */
+}
+
+.nav-primary a {
+    color: #fff;
+    display: block;
+    font-size: 110%;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 0.99em 1.5em; /* slightly less than one to prevent rounding error */
+    position: relative;
+    text-decoration: none;
+        -moz-transition: background 0.4s ease-out;
+        -o-transition: background 0.4s ease-out;
+        -webkit-transition: background 0.4s ease-out;
+    transition: background 0.4s ease-out;
+}
+
+.nav-primary a::after {
+    background: #ffe96f;
+    content: "";
+    height: 0.714em;
+    left: 50%;
+    margin-left: -0.42857em;
+    position: absolute;
+    top: -0.857em;
+        -moz-transform: rotate( 45deg );
+        -ms-transform: rotate( 45deg );
+        -o-transform: rotate( 45deg );
+        -webkit-transform: rotate( 45deg );
+    transform: rotate( 45deg );
+        -moz-transition: top 0.3s ease-out;
+        -o-transition: top 0.3s ease-out;
+        -webkit-transition: top 0.3s ease-out;
+    transition: top 0.3s ease-out;
+    width: 0.714em;
+}
+
+.nav-primary a:hover {
+    background: #AF1E30;
+    background-image:
+        linear-gradient(
+            rgba(225, 0, 0, 0),
+            rgba(225, 0, 0, 0) 90%,
+            rgba(225, 0, 0, 100) 90%,
+            rgba(225, 0, 0, 100) 100%
+        );
+    overflow: hidden;
+    position: relative;
+}
+
+.nav-primary a:hover::after {
+    top: -5px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5%;
+  font-size: 15px;
+  text-align: center;
+ }
+
+ .carousel-control.left {
+	 right: auto;
+  left: 0;
+  background-image: none;
+  background-image:        none;
+  filter: none;
+  background-repeat: repeat-x;
+}
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background-image: none;
+  background-image:        none;
+  filter: none;
+  background-repeat: repeat-x;
+}
+
+/* version 2 styling */
+
+.bottom-div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    color:#fff;
+    padding:5px;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    color:#fff;
+    padding:5px;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+/* added for version 4 */
+.bottom-div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    color:#fff;
+    background-color: rgba(0,0,0,0.6);
+    padding:5px;
+    
+  }
+
+.square {
+    float:left;
+    position: relative;
+    width: 100%;
+    padding-bottom : 100%; 
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+margin-bottom:10px;
+}
+
+.rect {
+    float:left;
+    position: relative;
+    width: 100%;
+    padding-bottom : 76%; 
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.heading {
+  background-color:#205b79; 
+  height:30px; 
+  padding-left:15px;
+  padding-bottom:15px;
+}

@@ -1,0 +1,31 @@
+<?php
+function getlastthursdaydate() {
+	$given= time(); //echo 'Tora: '. date('Y-m-d', $given) ."\n"; echo "Σημερα ειναι: " . date('w', $given) . "<br>";
+	if( date('w', $given) == '4' ) {  $thisThursday = date('d-m-Y', $given); $thuBefore = $given; }
+	else {
+		$thuBefore = strtotime("last thursday", $given); //echo 'Proigoumeni Pempti: '. date('Y-m-d', $thuBefore) ."\n";
+		$thisThursday = date('d-m-Y', $thuBefore);
+	}
+	return $thisThursday;
+}
+
+function getnextthursdaydate() {
+	$given= time(); //echo 'Tora: '. date('Y-m-d', $given) ."\n"; echo "Σημερα ειναι: " . date('w', $given) . "<br>";
+	if( date('w', $given) == '4' ) {  $thisThursday = date('d-m-Y', $given); $thuBefore = $given; }
+	else {
+		$thuBefore = strtotime("next thursday", $given); //echo 'Proigoumeni Pempti: '. date('Y-m-d', $thuBefore) ."\n";
+		$thisThursday = date('d-m-Y', $thuBefore);
+	}
+	return $thisThursday;
+}
+
+function getlastthursdaystamp() {
+	$given= time(); //echo 'Tora: '. date('Y-m-d', $given) ."\n"; echo "Σημερα ειναι: " . date('w', $given) . "<br>";
+	if( date('w', $given) == '4' ) {  $thisThursday = date('d-m-Y', $given); $thuBefore = $given; }
+	else {
+		$thuBefore = strtotime("last thursday", $given); //echo 'Proigoumeni Pempti: '. date('Y-m-d', $thuBefore) ."\n";
+		$thisThursday = date('d-m-Y', $thuBefore);
+	}
+	return $thuBefore;
+}
+?>

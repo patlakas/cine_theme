@@ -1,0 +1,35 @@
+<?php 
+	//Count last week
+	$lastweekstamp = strtotime("-1 week");
+	//echo 'lastweekstamp: '. date('Y-m-d', $lastweekstamp) ."\n";
+	//Query for most visited films last week
+	$query = " 
+		SELECT COUNT( * ) AS c, theaterID AS m
+		FROM  `log_theater` 
+		WHERE TIMESTAMP > " . $lastweekstamp . "
+		GROUP BY theaterID
+		ORDER BY COUNT( * ) DESC 
+	"; 
+	//echo $query; 
+	$myrows = $wpdb->get_results($query);
+	$count = 0;
+	foreach ($myrows as $row) : 
+		$movID = $row->m;
+		$url = wp_get_attachment_url( get_post_thumbnail_id($movID) ); ?>
+		<div class="col-md-12 col-sm-12" style="margin-bottom:3px; margin-left:0px; padding-left:0px;">
+			<div class="col-md-4 col-xs-4"> <!--- <img src="<?php echo $url;?>"/> --->
+				<div class="row" style="height:3.5em; background-size: 100% 100%; background-image: url('<?php echo $url; ?>');" > 
+					<div style="height:3.5em; overflow: hidden; background-size: 100% 100%; background-color:rgba(5, 18, 29, 0.7); "><center><strong><h2 style="margin-top:0.5em;"> <p style="color:#fff;"> <?php echo $count+1; ?> </p> </h2> </strong></center>  </div> 
+				</div> 
+			</div>
+			<div class="col-md-8 col-xs-8">
+				<strong><a href="<?php echo get_permalink($movID); ?>">
+					<?php echo " " . get_the_title( $movID ); ?> 
+				</a></strong>
+			</div>
+		</div>
+		<?php $count++; if ($count > 9) break;
+	endforeach;
+?>
+
+
